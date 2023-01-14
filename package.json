@@ -1,0 +1,59 @@
+{
+  "name": "react-typescript-generator",
+  "publisher": "Chetan25",
+  "displayName": "React Typescript Generator",
+  "description": "Convert/Generate code to typescript/React with latest es6  synatax",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetan25/vscode-react-typescript-generator"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:react-typescript-generator.convertToTypescript"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "react-typescript-generator.convertToTypescript",
+        "title": "Convert To Typescript"
+      }
+    ],
+    "configuration": {
+      "title": "react-typescript-generator"
+    },
+    "keybindings": [
+      {
+        "command": "react-typescript-generator.convertToTypescript",
+        "key": "alt+ctrl+t",
+        "mac": "alt+ctrl+t",
+        "when": "editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "openai": "^3.1.0"
+  }
+}
